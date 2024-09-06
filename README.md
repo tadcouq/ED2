@@ -1,6 +1,6 @@
 # ED2
 <p>
-Tổng hợp giáo trình, bài tập lớn,... của nhóm ngành ED2 tại Đại học Bách Khoa Hà Nội
+Tổng hợp giáo trình, bài tập lớn,... (không gồm Toán, lý) của nhóm ngành ED2 tại Đại học Bách Khoa Hà Nội
 </p>
 
 <p>
