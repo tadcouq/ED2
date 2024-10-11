@@ -7,7 +7,8 @@ Tổng hợp giáo trình, bài tập lớn,... (không gồm Toán, lý) của 
 Chú ý những môn có đề (D) chỉ có up lên drive, còn trên Github cần download để xem
 </p>
 <p>
-Link bài giảng Drive: https://srt.tdcq.me/11
+Link bài giảng Drive: https://srt.tdcq.me/11<br>
+Khi nào học xong ném lên...
 </p>
 
 <href>![>-<](asset/masha_angry.jpg)</href>
