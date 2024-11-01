@@ -1,0 +1,26 @@
+function MTF(arr, n) {
+    // Trong đó arr mảng số đặt ra, n là phần tử search push lên
+    console.log('Chuỗi đã nhập:', arr, 'n:', n);
+    
+    // kiểm tra điều kiện n
+    if (n <= 0 || n > arr.length) {
+        return 'n sai';
+    }
+    else if (n === 1) {
+        console.log('n = 1 không tạo thay đổi');
+        return arr;
+    }
+    
+    // function MTF
+    let list = [...arr];                        // tạo 1 bảng sao chép ra
+    let element = list[n-1];                    // lấy phần tử cần di chuyển
+    console.log('Element di chuyển:', element);
+    list.splice(n-1, 1);                        // xóa phần tử cần di chuyển
+    list.unshift(element);                      // thêm phần tử vào đầu mảng
+
+    return list;                                // trả về mảng mới              
+}
+
+let arr = [12, 24, 16, 33, 41, 55];
+let n = -5;
+console.log(MTF(arr, n));
