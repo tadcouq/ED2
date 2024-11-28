@@ -1,6 +1,8 @@
 /*
 3.	Viết hàm jumpSearch theo hàm mũ tăng dần, 
 Biết: đầu vào là một mảng các số thực và giá trị cần tìm, đầu ra là chỉ số của phần tử nếu tìm thấy, -1 nếu không tìm thấy.
+
+Bước nhảy = 2^n, với n bắt đầu từ 0
 */
 
 function isSorted(arr) {
@@ -18,34 +20,31 @@ function jumpSearch(arr, x) {
     }
 
     let n = arr.length;
-    let step = Math.floor(Math.sqrt(n));        // Bước nhảy = căn bậc 2 của n
-    let prev = 0;                               // Chỉ số phần tử trước
-    while (arr[Math.min(step, n) - 1] < x) {    // Khi phần tử nhảy nhỏ hơn x, tìm phần tử trước
+    let step = 1;                                // Bước nhảy ban đầu = 2^0 = 1
+    let prev = 0;
+
+    // Tìm phạm vi chứa phần tử x
+    while (step < n && arr[step - 1] < x) {
         prev = step;
-        step += Math.floor(Math.sqrt(n));
-        if (prev >= n) {                        // Nếu prev lớn hơn hoặc bằng n
-            return -1;
+        step *= 2;                               // Tăng bước nhảy theo 2^n
+    }
+
+    // Thu hẹp phạm vi tìm kiếm trong khoảng [prev, min(step, n)]
+    let end = Math.min(step, n);
+    for (let i = prev; i < end; i++) {
+        if (arr[i] === x) {
+            return i;                            // Trả về chỉ số nếu tìm thấy
         }
     }
-    while (arr[prev] < x) {                     // Nếu phần tử trước nhỏ hơn x
-        prev++;
-        if (prev === Math.min(step, n)) {       // Nếu prev = step hoặc prev = n
-            return -1;
-        }
-    }
-    if (arr[prev] === x) {                      // Nếu phần tử trước bằng x
-        return prev;                            // Trả về chỉ số
-    }
-    return -1;                                  // Ngược lại tất cả các trường hợp trả về -1
-};
+
+    return -1;                                   // Không tìm thấy
+}
 
 // Test cases
 let arr1 = [0, 12, 1, 3, 4, 5, 6, 7, 8, 9];     // Chưa sắp xếp
 let x1 = 5;
-let index1 = jumpSearch(arr1, x1);
-console.log(index1);                            // Output: -1
+console.log(jumpSearch(arr1, x1));              // Output: -1
 
 let arr2 = [0, 1, 3, 4, 5, 6, 7, 8, 9, 12];     // Đã sắp xếp
 let x2 = 5;
-let index2 = jumpSearch(arr2, x2);
-console.log(index2);                            // Output: 4
+console.log(jumpSearch(arr2, x2));              // Output: 4
