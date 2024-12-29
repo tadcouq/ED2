@@ -4,7 +4,7 @@ Tổng hợp giáo trình, bài tập lớn,... (không gồm Toán, lý) của 
 </p>
 
 <p>
-Chú ý những môn có đề (D) chỉ có up lên drive, còn trên Github cần download để xem
+Chú ý những môn có đề (D) chỉ có up lên drive, (G) là trên repo Git khác, nhấn vào để trỏ tới. Với file PDF có trên Github cần download để xem
 </p>
 <p>
 Link bài giảng Drive: https://srt.tdcq.me/11<br>
