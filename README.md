@@ -11,4 +11,6 @@ Link bài giảng Drive: https://srt.tdcq.me/11<br>
 Khi nào học xong ném lên...
 </p>
 
+<p> Module 2 nhé, còn khác thì mình chịu ¯\_(ツ)_/¯</p>
+
 <href>![>-<](asset/masha_angry.jpg)</href>
